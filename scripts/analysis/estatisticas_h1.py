@@ -1,5 +1,8 @@
 #importando a biblioteca pandas para análise de dados#
 import pandas as pd
+#Grafico de dispersão para visualizar a relação entre anos de estudo e renda#
+import matplotlib.pyplot as plt
+
 
 df = pd.read_csv(
     "data/processed/pnad_processed.correl.estud.e.renda.csv"
@@ -9,9 +12,6 @@ print(df.head())
 
 #estatísticas descritivas#
 print(df.describe())
-
-#Grafico de dispersão para visualizar a relação entre anos de estudo e renda#
-import matplotlib.pyplot as plt
 
 plt.scatter(df["Years_of_study"], df["Income"])
 plt.xlabel("Anos de estudo")

@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+# Analise de variância (ANOVA)##
+from scipy.stats import f_oneway
 
 # Carregar dados
 df = pd.read_csv("data/processed/pnad_processed.correl.estud.e.renda.csv")
@@ -24,8 +26,6 @@ df["Education_Level"] = np.select(condicoes, grupos, default="Não classificado"
 # Conferir quantidade por grupo
 print(df["Education_Level"].value_counts())
 
-# Analise de variância (ANOVA)##
-from scipy.stats import f_oneway
 
 fund_inc = df[df["Education_Level"]=="Fundamental incompleto"]["Income"]
 fund_comp = df[df["Education_Level"]=="Fundamental completo"]["Income"]
