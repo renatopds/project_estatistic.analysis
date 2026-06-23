@@ -4,9 +4,7 @@ import matplotlib.pyplot as plt
 
 from scipy.stats import chi2_contingency
 
-# =====================================================
 # CARREGAMENTO DOS DADOS
-# =====================================================
 
 df = pd.read_csv("data/raw/pnad_2015.csv")
 

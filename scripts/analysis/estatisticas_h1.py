@@ -1,7 +1,6 @@
-#importando a biblioteca pandas para análise de dados#
 import pandas as pd
-#Grafico de dispersão para visualizar a relação entre anos de estudo e renda#
 import matplotlib.pyplot as plt
+from scipy.stats import pearsonr
 
 
 df = pd.read_csv(
@@ -107,8 +106,6 @@ plt.savefig(
 plt.close()
 ##Parametro##
 alpha=0.3
-##teste de pearson para verificar a correlação entre anos de estudo e renda##
-from scipy.stats import pearsonr
 
 r, p = pearsonr(df["Years_of_study"], df["Income"])
 

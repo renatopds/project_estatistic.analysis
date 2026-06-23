@@ -97,7 +97,6 @@ print("\n" + "=" * 50)
 print("TESTE DE NORMALIDADE")
 print("=" * 50)
 
-# Limite de 5000 observações para evitar problemas visuais
 homens_amostra = homens.sample(
     min(5000, len(homens)),
     random_state=42
@@ -181,9 +180,7 @@ else:
     print(f"Estatística U: {estatistica:.4f}")
     print(f"P-valor: {p_valor:.10f}")
 
-# =====================================================
 # INTERPRETAÇÃO
-# =====================================================
 
 print("\n" + "=" * 50)
 print("CONCLUSÃO")
