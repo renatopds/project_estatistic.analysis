@@ -198,3 +198,4 @@ print(
 print(
     "- outputs/graphs/heatmap_escolaridade_renda.png"
 )
+ 
